@@ -1,0 +1,38 @@
+{
+  "name": "github-feedback-extension",
+  "version": "0.0.1",
+  "description": "Chrome extension for requesting feedbackon Github",
+  "main": "index.js",
+  "author": "Junior Engineer",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
+    "axios": "^0.21.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/eslint-parser": "^7.12.16",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "@emotion/babel-plugin": "^11.2.0",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^7.0.0",
+    "css-loader": "^5.0.2",
+    "eslint": "^7.20.0",
+    "eslint-webpack-plugin": "^2.5.1",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webextension-polyfill": "^0.7.0",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "start": "webpack serve --stats-error-details true",
+    "build": "NODE_ENV=production webpack build --mode production"
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "Github Feedback Extension",
+    "icons": {
+      "16": "logo192.png",
+      "48": "logo192.png",
+      "128": "logo192.png"
+    },
+    "manifest_version": 2,
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://github.com/*"],
+        "js": [ "browser-polyfill.min.js", "index.js"]
+      }
+    ],
+    "background": {
+      "scripts": [
+        "browser-polyfill.min.js"
+    ]},
+    "browser_action": {
+      "default_title": "Append Test Text"
+    },
+    "version": "0.0.1",
+    "web_accessible_resources": [
+      "fonts/*.ttf"
+    ]
+  }
+  

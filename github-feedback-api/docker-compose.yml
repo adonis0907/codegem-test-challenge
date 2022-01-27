@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  api:
+    build: .
+    ports: 
+      - "3000:3000"
+    environment:
+      - API_PORT=3000
+      - API_HOST=0.0.0.0
+      - PG_HOST=postgres
+      - PG_PORT=5432
+      - PG_USER=${POSTGRES_USER}
+      - PG_PASSWORD=${POSTGRES_PASSWORD}
+      - PG_DB=code_gem
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres
+    volumes:
+      - ./tables:/docker-entrypoint-initdb.d/
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=code_gem
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
